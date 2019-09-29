@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="content-container">
+        <p class="help">Help</p>
+        <h3>Simple</h3>
+        <h1>Todo list</h1>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name_task" placeholder="Name of the task ..." id="entryName">
+                <p id="maxLength">*The name can’t contain more then 18 characters.</p>
+                <input type="date" name="date" id="entryDate">
+                <select name="category" id="entryCategory">
+                    <option value="" disabled selected>Select category</option>
+                    <option value="School">School</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="submit" value="Submit" id="addEntry">
+            </form>
+        </div>
+        <br>
+        <div class="entries-container" id="entriesContainer">
+            <h1>Your entries:</h1>
+
+        </div>
+        <footer></footer>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+<template id="entryTemplate">
+    <div class="entry">
+        <h5></h5>
+        <p class="date"></p>
+        <p class="category"></p>
+        <label class="checkbox-container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+</template>
+</html>
